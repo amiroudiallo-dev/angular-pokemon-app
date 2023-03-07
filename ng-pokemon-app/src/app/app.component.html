@@ -1,11 +1,3 @@
-<!--
-  ~ @author: Amirou Yannick Wendpuiré DIALLO
-  ~ @version: 1.0
-  ~ @email: <A HREF="mailto:amiroudiallo.yw@gmail.com">DIALLO Amirou Y. W</A>
-  ~ @Since 05/03/2023 09:54
-  ~ Copyright (c) 2023. amiroudiallo.yw, All rights reserved
-  -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,27 +6,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
-  <h1 class="center">Liste des pokémons</h1>
-  <div class="container">
-      <div class="row">
-          <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
-              <div class="card horizontal" appBorderCard>
-                    <div class="card-image">
-                        <img [src]="pokemon.picture" alt="picture" />
-                    </div>
-                  <div class="card-stacked">
-                      <div class="card-content">
-                          <p>{{ pokemon.name }}</p>
-                          <p> <small>{{ pokemon.created | date }}</small></p>
-                          <span
-                                  *ngFor="let type of pokemon.types" class="{{ type | pokemonTypeColor }}">
-                            {{ type }}
-                          </span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <nav>
+        <div class="nav-wrapper teal">
+            <a href="#" class="brand-logo center">
+                Pokédex
+            </a>
+        </div>
+    </nav>
+    <router-outlet></router-outlet>
 </body>
 </html>
